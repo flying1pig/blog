@@ -1,10 +1,10 @@
 import React from 'react';
 import { Input, Select, Button, notification } from 'antd';
 import { connect } from 'dva';
-import SimpleMDE from 'simplemde';
+import SimpleMDE from 'simplemde-w';
 import marked from 'marked';
 import highlight from 'highlight.js';
-import 'simplemde/dist/simplemde.min.css';
+import 'simplemde-w/dist/simplemde.min.css';
 import './style.less';
 
 @connect(({ article, tag, category }) => ({

@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "npm run lint-staged",
     "presite": "node ./scripts/generateMock.js && cd functions && npm install",
-    "start": "cross-env APP_TYPE=site umi dev",
+    "start": "cross-env APP_TYPE=site NODE_OPTIONS=--openssl-legacy-provider umi dev",
     "start:no-mock": "cross-env MOCK=none umi dev",
     "build": "umi build",
     "site": "npm run presite && cross-env APP_TYPE=site npm run build && firebase deploy",
@@ -56,7 +56,7 @@
     "react-fittext": "^1.0.0",
     "react-router-dom": "^4.3.1",
     "save": "^2.3.2",
-    "simplemde": "^1.11.2"
+    "simplemde-w": "^1.11.4"
   },
   "devDependencies": {
     "@types/react": "^16.4.11",
